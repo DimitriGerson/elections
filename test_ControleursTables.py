@@ -12,7 +12,7 @@ class TestInterrogeTable(TestCase):
 
     def setUp(self):
         pass
-
+      
     def test_controleurTableNone(self):
         """Test que le controleur de l'objet de classe InterrogeTable
         est egal à None."""

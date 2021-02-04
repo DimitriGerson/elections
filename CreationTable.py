@@ -87,6 +87,8 @@ class TableSqlite(InterrogeTable):
         <class 'ControleursBases.ControleurBDSqlite'>
         >>> bob = CreationTable.TableSqlite(req,table,tableau)
         1
+        2
+        3
         L'initialitation de la table est réalisée.
         Fin de d'initialisation de table.
         1
@@ -152,6 +154,8 @@ class TableSqlite(InterrogeTable):
         <class 'ControleursBases.ControleurBDSqlite'>
         >>> bob = CreationTable.TableSqlite(req,table,tableau)
         1
+        2
+        3
         L'initialitation de la table est réalisée.
         Fin de d'initialisation de table.
         1
@@ -196,7 +200,6 @@ class TableSqlite(InterrogeTable):
             try :
                 if self.controleur[1].fetchone()[0]==1:
                     print("La table " + self.nomTable + " a au moins une ligne.")
-                    
             except Exception as e:
                 print("La table " + self.nomTable + " est vide !")
             #il faut fermer la connexion.   

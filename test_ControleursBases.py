@@ -30,7 +30,6 @@ class TestControleurBDSqlite(TestCase):
     def test_ouvrirConnexion_OK(self):
         """Test de fonctionnement de la connexion avec
         son connecteur"""
-        monConnecteur = self.monTest.ouvrirConnexion()
         self.assertIsInstance(monConnecteur,tuple)
         self.assertIsInstance(monConnecteur[0],Connection)
         self.assertIsInstance(monConnecteur[1],Cursor)
@@ -41,7 +40,6 @@ class TestControleurBDSqlite(TestCase):
         self.monTest = ControleurBDSqlite()
         monConnecteur = self.monTest.ouvrirConnexion()
         self.assertEqual(self.monTest.nom,'nouvelle_bdd.db')
-
 
     def test_fermerConnexion(self):
         """Procédure de fermeture de la connexion à la bdd"""
