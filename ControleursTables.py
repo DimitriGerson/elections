@@ -1,6 +1,58 @@
-"""Je dois créer une classe qui soit la classe mère de TableSqlite"""
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+    *****************Présentation du projet*****************
 
+    Documentation pour le projet "Analyse des élections"
+
+    *****************Les différents Modules*****************
+
+    1)interface
+
+    2)accès à la base de données
+
+    3)Module HTML
+
+    4)Tests (Ce module est présent dans chacun des trois autre module mais je voudrais créer au final un module de tests)
+
+    ********************************************************
+    ********************************************************
+    ********************************************************
+
+    Le but de l'ensemble de ces classes est de réaliser une application qui analyse
+    les résultats des elections en France en partant dans un premier temps de Rosny-sous-bois
+    Ce projet est réalisé en Python 3
+
+    2)accés à la base de données
+    Ce module est celui dans le quel vous vous trouvez.
+    Dans son ensemble il gère les transactions avec les bases de données.
+    Il est composé :
+    -d'un module qui est propre à l'application "Analyss des élections" Celle ci contiendra uniquement les données
+    -d'un module générale qui a pour vocation d'être réutilisable est totalement indépendante des données.
+    Nous cherchons à créer le moins de dépendances possible avec les données pour maximiser la réutilisation du code.
+    Nous cherchons aussi a faire de l'écocode en réduisant nos appels aux serveurs en se servant des imports en utilsant from
+    pour minimiser nos import.
+
+    Nous utilisons différent types de tests pour notre code le premier niveau étant directement dans le code grace au doctest.
+    Ce type de tests sont lancés après modification du fichier ou sur l'ensemble des fichiers ou d'un lot de fichier depuis un
+    fichier .bat
+
+    Un deuxième type de test sont fait via des fichiers testunits ceux-ci ne sont pas encore réaliser aujourd'hui.
+    
+    Ce module gère les accés à la base de données sur SQLite. Il fait donc partie du module générale.
+    La bibliothèque présente ici gère les accés à la base de données.
+    Elle ne s'occuppe pas d'ecrire de modifier ou d'intéroger la base de données.
+
+    Author Dimitri Gerson
+"""
 class InterrogeTable:
+    """Cette classe est la classe mère de TableSqlite elle contient
+    les methodes suivantes :
+    -ajoutLigneTable
+    -ajoutLigneSansCommit
+    -faireCommit
+    -interrogeTable
+    """
 
     def __init__(self,controleur):
         """

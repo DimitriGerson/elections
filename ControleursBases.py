@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
-
 """
     *****************Présentation du projet*****************
 
@@ -182,6 +180,7 @@ class ControleurBDSqlite:
         L'objet base.db a été détruit.
         """
         print("L'objet " + self.nom + " a été détruit.")
+        
     #Passage de requete     
     def requete(self,maRequete,tableauConnecteur):
         """pour passer une requête nous avons besoin d'une requete SQL l'objet doit déjà avoir son connecteur et son curseur

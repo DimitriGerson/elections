@@ -1,6 +1,5 @@
- #!/usr/bin/python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
 """
     *****************Présentation du projet*****************
 
@@ -90,6 +89,11 @@ class TableSqlite(InterrogeTable):
         1
         2
         3
+        L'initialitation de la table est réalisée.
+        Fin de d'initialisation de table.
+        1
+        2
+        table réalisée.
         Fin de d'initialisation de table.
         """
         super().__init__(controleur)#pour initialiser comme la classe mère
@@ -152,6 +156,11 @@ class TableSqlite(InterrogeTable):
         1
         2
         3
+        L'initialitation de la table est réalisée.
+        Fin de d'initialisation de table.
+        1
+        2
+        table réalisée.
         Fin de d'initialisation de table.
         >>> bob.creationTable()
         CREATE TABLE IF NOT EXISTS Communes(id_Commune INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,Nom TEXT,Code_Postal TEXT);
@@ -160,10 +169,11 @@ class TableSqlite(InterrogeTable):
         fin de procédure de création de la table Communes.
         Aucune erreur lors de la création de la table !
         La table Communes est vide !
-        
+        >>> controleur.fermerConnexion(tableau)
+        La connexion est fermée
+        Aucune erreur !
+        Fin de la methode fermerConnexion()
         """
-
-        
         try:
             print(self.requete)
             self.controleur[1].execute(self.requete)
